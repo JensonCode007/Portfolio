@@ -1,0 +1,32 @@
+[
+    {
+      "title": "DocuVault Engine:",
+      "description": "A secure, local-first Retrieval-Augmented Generation (RAG) engine. Built with a dual-stack architecture to ingest enterprise documents, ensure multi-tenant data isolation, and stream context-aware AI responses in real-time.",
+      "tags": ["Event-Driven Streaming", "Multi-Tenancy", "RAG","JWT", "SpringBoot", "FastAPI"],
+      "githubUrl": "https://github.com/JensonCode007/TheDocumentVault"
+
+    },
+    {
+      "title": "Neo - Local RAG Platform",
+      "description": "A self-hostable RAG platform built from scratch to chat with local files privately without uploading to the cloud.",
+      "tags": ["Python", "FastAPI", "React", "Vector DB"],
+      "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
+    },
+    {
+      "title": "Bitwise",
+      "description": "Bitwise is a desktop collaborative codespace built with Electron, React, and TypeScript. It provides a modern editor experience powered by Monaco, real-time collaboration via Yjs, and a connected backend for session management and persistence.",
+      "tags": ["Web Sockets", "Electron", "Type Script"],
+      "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
+    },
+    {
+      "title": "Autonomous Underwater Vehicle",
+      "description": "Finalist at the IIT Madras AUV Competition. Developed the core logic and navigation systems.",
+      "tags": ["C++", "ROS", "Hardware integration"]
+      
+    },
+    {
+      "title": "Custom TrOCR Pipeline for Historical Malayalam Manuscripts",
+      "description": "An end-to-end Machine Learning OCR pipeline utilizing CRAFT localization, custom Vertical Projection Profiling, and a fine-tuned Vision-Encoder-Decoder Transformer to digitize highly degraded 19th-century texts.",
+      "tags": ["PyTorch", "Hugging Face", "Transformers", "OpenCV", "Computer Vision", "Python"]
+    }
+]

@@ -25,7 +25,7 @@ export default function ProjectCard({title, description, tags, githubUrl, index}
         >
         <Card className="w-full bg-zinc-900 border-zinc-800 title-white">
             <CardHeader>
-                <CardTitle className="text-xl font-bold text-blue-400">{title}</CardTitle>
+                <CardTitle className="text-xl font-bold text-cyan-400">{title}</CardTitle>
                 <CardDescription className="text-zinc-400">{description}</CardDescription>
             </CardHeader>
             <CardContent>
