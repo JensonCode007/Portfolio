@@ -7,6 +7,12 @@
 
     },
     {
+      "title": "Sentinel: Real-Time Fraud Detection Engine",
+      "description": "A high-throughput, stateful stream processing architecture for live financial fraud detection. Built with a dual-layer defense system utilizing ultra-fast Redis velocity caching and an asynchronous Scikit-Learn Isolation Forest machine learning model, connected via Apache Kafka and streamed to the frontend via Server-Sent Events.",
+      "tags": ["Event-Driven Architecture", "Machine Learning", "Apache Kafka", "Spring Boot", "FastAPI", "Redis"],
+      "githubUrl": "https://github.com/JensonCode007/Sentinel"
+    },
+    {
       "title": "Neo - Local RAG Platform",
       "description": "A self-hostable RAG platform built from scratch to chat with local files privately without uploading to the cloud.",
       "tags": ["Python", "FastAPI", "React", "Vector DB"],
