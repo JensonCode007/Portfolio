@@ -1,16 +1,26 @@
 [
     {
+      "title": "Sentinel: Real-Time Fraud Detection Engine",
+      "description": "An event-driven, high-throughput stream processing architecture for live financial fraud detection with sub-10ms AI latency. Features a dual-layer defense system using Redis velocity caching and an asynchronous Scikit-Learn Isolation Forest model. Engineered with Apache Kafka, automated GitHub Actions CI/CD pipelines, and real-time system observability via Prometheus and Grafana.",
+      "tags": [
+        "Event-Driven Architecture", 
+        "Machine Learning", 
+        "Apache Kafka", 
+        "Spring Boot", 
+        "FastAPI", 
+        "Redis",
+        "Prometheus",
+        "Grafana",
+        "CI/CD"
+      ],
+      "githubUrl": "https://github.com/JensonCode007/Sentinel"
+    },
+    {
       "title": "DocuVault Engine:",
       "description": "A secure, local-first Retrieval-Augmented Generation (RAG) engine. Built with a dual-stack architecture to ingest enterprise documents, ensure multi-tenant data isolation, and stream context-aware AI responses in real-time.",
       "tags": ["Event-Driven Streaming", "Multi-Tenancy", "RAG","JWT", "SpringBoot", "FastAPI"],
       "githubUrl": "https://github.com/JensonCode007/TheDocumentVault"
 
-    },
-    {
-      "title": "Sentinel: Real-Time Fraud Detection Engine",
-      "description": "A high-throughput, stateful stream processing architecture for live financial fraud detection. Built with a dual-layer defense system utilizing ultra-fast Redis velocity caching and an asynchronous Scikit-Learn Isolation Forest machine learning model, connected via Apache Kafka and streamed to the frontend via Server-Sent Events.",
-      "tags": ["Event-Driven Architecture", "Machine Learning", "Apache Kafka", "Spring Boot", "FastAPI", "Redis"],
-      "githubUrl": "https://github.com/JensonCode007/Sentinel"
     },
     {
       "title": "Neo - Local RAG Platform",
