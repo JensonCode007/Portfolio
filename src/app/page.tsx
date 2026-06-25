@@ -46,7 +46,7 @@ export default function Home() {
                 blinkCursor={true}
                 pauseDelay={2000}
                 loop
-                typeSpeed={140}
+                typeSpeed={50}
                 deleteSpeed={200}
                 className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed"
               >
