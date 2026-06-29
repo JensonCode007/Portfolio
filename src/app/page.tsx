@@ -214,34 +214,45 @@ function PCard({p,delay}:{p: any; delay:number}) {
 ══════════════════════════════════════════════════════════════════ */
 export default function Home() {
   return (
-    <>
-      <Nav/>
+    <main className="min-h-screen bg-black text-white relative overflow-hidden">
+      <Navbar/>
+      
+      <Particles
+        className="absolute inset-0"
+        quantity={50} 
+        ease={80} 
+        color="#bfa5a5" 
+        refresh 
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section id="home" className="hero">
-        
-        {/* LaserFlow replacing SideRays & ParticleField */}
-        <div style={{position:'absolute',inset:0,zIndex:0,overflow:'hidden'}}>
-          <LaserFlow 
-            color="#38BDF8" 
-            wispSpeed={15} 
-            flowSpeed={0.35} 
-            mouseTiltStrength={0.05} 
-          />
-        </div>
-
-        <div className="container" style={{position:'relative',zIndex:1}}>
-
-          {/* Name — FuzzyText canvas */}
-          <div style={{marginBottom:4,animation:'fadeUp 0.6s 0.08s ease both',opacity:0,animationFillMode:'forwards'}}>
-            <FuzzyText fontSize="clamp(3.2rem,9vw,7.5rem)" fontWeight={400}
-              fontFamily="'Instrument Serif', Georgia, serif"
-              color="#F8FAFC" baseIntensity={0.08} hoverIntensity={0.45}
-              enableHover glitchMode glitchInterval={4000} glitchDuration={180}
-              fuzzRange={28} fps={60}>
-              Jenson
-            </FuzzyText>
-          </div>
+      />
+      <section id="home" className="relative z-10 pt-40 pb-24 min-h-screen flex items-center">
+        <div className="max-w-6xl mx-auto px-8 w-full">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-col items-start justify-center">
+              <h2 className="text-2xl text-zinc-400 mb-2 font-medium tracking-wide">
+                Hey there, I am
+              </h2>
+              <Text3DFlip
+                className="mb-6"
+                textClassName="text-6xl md:text-8xl font-bold text-white tracking-tighter"
+                flipTextClassName="text-6xl md:text-8xl font-bold text-zinc-500 tracking-tighter"
+                rotateDirection="top"
+              >
+                Jenson.
+              </Text3DFlip>
+              
+              <TypingAnimation
+                blinkCursor={true}
+                pauseDelay={2000}
+                loop
+                typeSpeed={140}
+                deleteSpeed={200}
+                className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed"
+              >
+                A Software Engineer building high-performance backends, AI architectures, and interactive web experiences.
+              </TypingAnimation>
+            </div>
 
           {/* Tagline */}
           <p className="hero-tagline" style={{animation:'fadeUp 0.6s 0.18s ease both',opacity:0,animationFillMode:'forwards'}}>
