@@ -1,48 +1,103 @@
 [
-    {
-      "title": "Sentinel: Real-Time Fraud Detection Engine",
-      "description": "An event-driven, high-throughput stream processing architecture for live financial fraud detection with sub-10ms AI latency. Features a dual-layer defense system using Redis velocity caching and an asynchronous Scikit-Learn Isolation Forest model. Engineered with Apache Kafka, automated GitHub Actions CI/CD pipelines, and real-time system observability via Prometheus and Grafana.",
-      "tags": [
-        "Event-Driven Architecture", 
-        "Machine Learning", 
-        "Apache Kafka", 
-        "Spring Boot", 
-        "FastAPI", 
-        "Redis",
-        "Prometheus",
-        "Grafana",
-        "CI/CD"
-      ],
-      "githubUrl": "https://github.com/JensonCode007/Sentinel"
-    },
-    {
-      "title": "DocuVault Engine:",
-      "description": "A secure, local-first Retrieval-Augmented Generation (RAG) engine. Built with a dual-stack architecture to ingest enterprise documents, ensure multi-tenant data isolation, and stream context-aware AI responses in real-time.",
-      "tags": ["Event-Driven Streaming", "Multi-Tenancy", "RAG","JWT", "SpringBoot", "FastAPI"],
-      "githubUrl": "https://github.com/JensonCode007/TheDocumentVault"
-
-    },
-    {
-      "title": "Neo - Local RAG Platform",
-      "description": "A self-hostable RAG platform built from scratch to chat with local files privately without uploading to the cloud.",
-      "tags": ["Python", "FastAPI", "React", "Vector DB"],
-      "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
-    },
-    {
-      "title": "Bitwise",
-      "description": "Bitwise is a desktop collaborative codespace built with Electron, React, and TypeScript. It provides a modern editor experience powered by Monaco, real-time collaboration via Yjs, and a connected backend for session management and persistence.",
-      "tags": ["Web Sockets", "Electron", "Type Script"],
-      "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
-    },
-    {
-      "title": "Autonomous Underwater Vehicle",
-      "description": "Finalist at the IIT Madras AUV Competition. Developed the core logic and navigation systems.",
-      "tags": ["C++", "ROS", "Hardware integration"]
-      
-    },
-    {
-      "title": "Custom TrOCR Pipeline for Historical Malayalam Manuscripts",
-      "description": "An end-to-end Machine Learning OCR pipeline utilizing CRAFT localization, custom Vertical Projection Profiling, and a fine-tuned Vision-Encoder-Decoder Transformer to digitize highly degraded 19th-century texts.",
-      "tags": ["PyTorch", "Hugging Face", "Transformers", "OpenCV", "Computer Vision", "Python"]
-    }
+  {
+    "id": "sentinel",
+    "icon": "⚡",
+    "size": "feat",
+    "electric": true,
+    "title": "Sentinel",
+    "sub": "Real-Time Fraud Detection Engine",
+    "description": "An event-driven, high-throughput stream processing architecture for live financial fraud detection with sub-10ms AI latency. Features a dual-layer defense system using Redis velocity caching and an asynchronous Scikit-Learn Isolation Forest model. Engineered with Apache Kafka, automated GitHub Actions CI/CD pipelines, and real-time system observability via Prometheus and Grafana.",
+    "tags": [
+      "Event-Driven Architecture", 
+      "Machine Learning", 
+      "Apache Kafka", 
+      "Spring Boot", 
+      "FastAPI", 
+      "Redis",
+      "Prometheus",
+      "Grafana",
+      "CI/CD"
+    ],
+    "githubUrl": "https://github.com/JensonCode007/Sentinel"
+  },
+  {
+    "id": "docuvault",
+    "icon": "🗄️",
+    "size": "half",
+    "electric": false,
+    "title": "DocuVault Engine",
+    "sub": "Secure Local-First RAG",
+    "description": "A secure, local-first Retrieval-Augmented Generation (RAG) engine. Built with a dual-stack architecture to ingest enterprise documents, ensure multi-tenant data isolation, and stream context-aware AI responses in real-time.",
+    "tags": [
+      "Event-Driven Streaming", 
+      "Multi-Tenancy", 
+      "RAG",
+      "JWT", 
+      "SpringBoot", 
+      "FastAPI"
+    ],
+    "githubUrl": "https://github.com/JensonCode007/TheDocumentVault"
+  },
+  {
+    "id": "neo",
+    "icon": "🤖",
+    "size": "half",
+    "electric": false,
+    "title": "Neo",
+    "sub": "Local RAG Platform",
+    "description": "A self-hostable RAG platform built from scratch to chat with local files privately without uploading to the cloud.",
+    "tags": [
+      "Python", 
+      "FastAPI", 
+      "React", 
+      "Vector DB"
+    ],
+    "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
+  },
+  {
+    "id": "bitwise",
+    "icon": "💻",
+    "size": "normal",
+    "electric": false,
+    "title": "Bitwise",
+    "sub": "Collaborative Desktop IDE",
+    "description": "Bitwise is a desktop collaborative codespace built with Electron, React, and TypeScript. It provides a modern editor experience powered by Monaco, real-time collaboration via Yjs, and a connected backend for session management and persistence.",
+    "tags": [
+      "Web Sockets", 
+      "Electron", 
+      "TypeScript"
+    ],
+    "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
+  },
+  {
+    "id": "auv",
+    "icon": "🌊",
+    "size": "normal",
+    "electric": false,
+    "title": "Autonomous Underwater Vehicle",
+    "sub": "Competition Finalist",
+    "description": "Finalist at the IIT Madras AUV Competition. Developed the core logic and navigation systems.",
+    "tags": [
+      "C++", 
+      "ROS", 
+      "Hardware integration"
+    ]
+  },
+  {
+    "id": "trocr",
+    "icon": "📜",
+    "size": "normal",
+    "electric": false,
+    "title": "Custom TrOCR Pipeline",
+    "sub": "Historical Malayalam Manuscripts",
+    "description": "An end-to-end Machine Learning OCR pipeline utilizing CRAFT localization, custom Vertical Projection Profiling, and a fine-tuned Vision-Encoder-Decoder Transformer to digitize highly degraded 19th-century texts.",
+    "tags": [
+      "PyTorch", 
+      "Hugging Face", 
+      "Transformers", 
+      "OpenCV", 
+      "Computer Vision", 
+      "Python"
+    ]
+  }
 ]
