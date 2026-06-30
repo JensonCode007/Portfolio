@@ -23,9 +23,21 @@ export default function ProjectCard({title, description, tags, githubUrl, index}
         ease: "easeOut",
         }} whileHover={{ y: -5, scale: 1, cursor: "pointer" }}
         >
-        <Card className="w-full bg-zinc-900 border-zinc-800 title-white">
+        <Card className="
+            relative
+            overflow-hidden
+            rounded-[36px]
+
+            bg-white/[0.07]
+            backdrop-blur-[40px]
+            backdrop-saturate-[180%]
+
+            border border-white/15
+
+            shadow-[0_12px_50px_rgba(0,0,0,0.22)]
+            rounded-4xl">
             <CardHeader>
-                <CardTitle className="text-xl font-bold text-cyan-400">{title}</CardTitle>
+                <CardTitle className="text-xl font-bold text-slate-600">{title}</CardTitle>
                 <CardDescription className="text-zinc-400">{description}</CardDescription>
             </CardHeader>
             <CardContent>

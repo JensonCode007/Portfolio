@@ -9,8 +9,7 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 import { motion } from "framer-motion"
 import projectData from "@/data/projects.json"
 import ProfileCard from "@/components/ui/ProfileCard";
-
-
+import BorderGlow from '@/components/BorderGlow';
 
 
 export default function Home() {
@@ -133,19 +132,24 @@ export default function Home() {
         >
           /projects
         </TypingAnimation>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectData.map((project, index)=>(
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              tags={project.tags}
-              githubUrl={project.githubUrl}
-              index={index}
-            />
+            
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                githubUrl={project.githubUrl}
+                index={index}
+              />
+            
+            
           ))}
 
         </div>
+        
 
         </div>
         
