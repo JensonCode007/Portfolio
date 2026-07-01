@@ -21,6 +21,22 @@
     "githubUrl": "https://github.com/JensonCode007/Sentinel"
   },
   {
+    "id": "legacy-orchestrator",
+    "icon": "🧠",
+    "size": "normal",
+    "electric": false,
+    "title": "Legacy Multi-Agent Orchestrator",
+    "sub": "Ongoing Work",
+    "description": "A simple multi-agent orchestrator currently in early development. The architecture is purposefully kept lightweight, relying solely on Gemini API calls to coordinate and manage agent tasks.",
+    "tags": [
+      "Gemini API", 
+      "LLMs", 
+      "Work in Progress"
+    ],
+    "githubUrl": "https://github.com/JensonCode007/Multi-Agent-Orchestrator"
+
+  },
+  {
     "id": "docuvault",
     "icon": "🗄️",
     "size": "half",
