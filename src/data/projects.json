@@ -27,7 +27,7 @@
     "electric": false,
     "title": "Legacy Multi-Agent Orchestrator",
     "sub": "Ongoing Work",
-    "description": "A simple multi-agent orchestrator currently in early development. The architecture is purposefully kept lightweight, relying solely on Gemini API calls to coordinate and manage agent tasks.",
+    "description": "An ongoing multi-agent orchestrator designed to integrate modern AI with legacy enterprise systems, like COBOL mainframes, to solve process debt. Currently in early development, the architecture is kept lightweight by relying solely on Gemini API calls to coordinate specialized agents (Scout, Knowledge Bridge, Compliance).",
     "tags": [
       "Gemini API", 
       "LLMs", 
