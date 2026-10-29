@@ -184,16 +184,17 @@ export default function Home() {
           </AnimatedContent>
         
         <div className="grid grid-cols-1 items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projectData.map((project, index)=>(
+          {projectData.map((project)=>(
             
               <ProjectCard
-                key={index}
+                key={project.id}
                 title={project.title}
                 sub={project.sub}
                 description={project.description}
                 tags={project.tags}
                 githubUrl={project.githubUrl}
                 showFlux={['sentinel', 'eye-guardian', 'docuvault', 'trocr'].includes(project.id)}
+                upcoming={['uotf', 'titan'].includes(project.id)}
               />
             
             

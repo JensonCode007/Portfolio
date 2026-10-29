@@ -1,5 +1,19 @@
 [
   {
+    "id": "uotf",
+    "title": "UOTF",
+    "sub": "Universal Offline Transport Independent Framework",
+    "description": "An offline-first messaging framework that keeps security and protocol layers stable while routing encrypted packets through interchangeable transports such as QR, Bluetooth, audio, flashlight, and LoRa.",
+    "tags": ["Upcoming", "Offline-First", "Multi-Transport", "AES-256-GCM", "Plugin Architecture", "Relay Protocol"]
+  },
+  {
+    "id": "titan",
+    "title": "Project Titan",
+    "sub": "AI Operating Environment for Collaborative Multi-Agent Systems",
+    "description": "A local-first AI workplace where specialized agents plan, research, build, verify, and govern work through shared organizational memory and human approval.",
+    "tags": ["Upcoming", "Multi-Agent Systems", "Persistent Memory", "Governance", "Explainable AI", "Adaptive Orchestration"]
+  },
+  {
     "id": "sentinel",
     "title": "Sentinel",
     "sub": "Real-Time Fraud Detection Engine",
@@ -12,7 +26,8 @@
     "title": "Eye Guardian",
     "sub": "Healthy Screen Habits",
     "description": "An Android app that uses camera-based distance checks, break reminders, and habit insights to encourage healthier screen time.",
-    "tags": ["Android", "Kotlin", "CameraX", "ML Kit", "Health Tech"]
+    "tags": ["Android", "Kotlin", "CameraX", "ML Kit", "Health Tech"],
+    "githubUrl": "https://github.com/JensonCode007Eye-Guardian"
   },
   {
     "id": "legacy-orchestrator",
@@ -58,6 +73,7 @@
     "title": "Custom TrOCR Pipeline",
     "sub": "Historical Malayalam Manuscripts",
     "description": "A computer-vision and transformer pipeline for digitizing degraded 19th-century Malayalam manuscripts.",
-    "tags": ["PyTorch", "Hugging Face", "Transformers", "OpenCV", "Computer Vision", "Python"]
+    "tags": ["PyTorch", "Hugging Face", "Transformers", "OpenCV", "Computer Vision", "Python"],
+    "githubUrl": "https://github.com/JensonCode007/CustomOCR"
   }
 ]
