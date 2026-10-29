@@ -82,6 +82,7 @@ export default function Home() {
                     handle="jensoncode007"
                     status="Open to work"
                     contactText="Say hello"
+                    contactHref="mailto:jensonrajan321@gmail.com?subject=Hello%20Jenson"
                     avatarUrl="/ascii_output_my_image.png"
                     miniAvatarUrl="/ascii_output_my_image.png"
                     showUserInfo
@@ -90,7 +91,6 @@ export default function Home() {
                     behindGlowEnabled
                     behindGlowColor="rgba(255,255,255,0.22)"
                     innerGradient="linear-gradient(145deg,rgba(30, 30, 34, 0.28) 0%,rgba(72, 72, 78, 0.14) 100%)"
-                    onContactClick={()=>window.location.href='mailto:jensonrajan321@gmail.com'}
                     className=""
                   />
                 </div>
@@ -135,17 +135,19 @@ export default function Home() {
             >
               /about
             </TypingAnimation>
-            <TypingAnimation
-              as="p"
-              blinkCursor={true}
-              pauseDelay={2000}
-              typeSpeed={50}
-              deleteSpeed={2}
-              loop
-              className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed"
-          >
-            Hey there, my name&apos;s Jenson. I&apos;m a final year student pursuing a computer science degree. I love programmnig and build cool projects. I also love reasearch and reading.
-          </TypingAnimation>
+            <div className="h-44 max-w-lg overflow-hidden sm:h-32">
+              <TypingAnimation
+                as="p"
+                blinkCursor={true}
+                pauseDelay={2000}
+                typeSpeed={50}
+                deleteSpeed={2}
+                loop
+                className="text-lg leading-relaxed text-zinc-400 md:text-xl"
+              >
+                Hey there, my name&apos;s Jenson. I&apos;m a final year student pursuing a computer science degree. I love programmnig and build cool projects. I also love reasearch and reading.
+              </TypingAnimation>
+            </div>
             </AnimatedContent>
         </div>
       </section>
