@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { Mail, Menu, X } from "lucide-react"; 
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa6";
-import { motion, AnimatePresence } from "framer-motion"; 
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+    <nav className="fixed top-0 z-50 w-full border-b border-white/[0.08] bg-black/70 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
 
         
@@ -23,6 +23,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
             <a href="#home" className="hover:text-white transition-colors">Home</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
           </div>        
         </div>
@@ -44,8 +45,11 @@ export default function Navbar() {
         </div>
 
         
-        <button 
-          className="md:hidden text-zinc-400 hover:text-white"
+        <button
+          type="button"
+          aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={isOpen}
+          className="text-zinc-400 transition-colors hover:text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
          
@@ -67,6 +71,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-4 text-sm font-medium text-zinc-400">
               <a href="#home" onClick={() => setIsOpen(false)} className="hover:text-white">Home</a>
               <a href="#about" onClick={() => setIsOpen(false)} className="hover:text-white">About</a>
+              <a href="#experience" onClick={() => setIsOpen(false)} className="hover:text-white">Experience</a>
               <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-white">Projects</a>
             </div>
 

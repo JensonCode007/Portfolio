@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useCallback, useMemo, useState } from 'react';
+import Image from 'next/image';
+import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 
 const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)';
 
@@ -461,9 +462,9 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
         <section
           className="grid relative overflow-hidden"
           style={{
-            height: '80svh',
-            maxHeight: '540px',
-            aspectRatio: '0.718',
+            height: 'min(62svh, 420px)',
+            maxHeight: '420px',
+            aspectRatio: '0.76',
             borderRadius: cardRadius,
             backgroundBlendMode: 'color-dodge, normal, normal, normal',
             boxShadow:
@@ -515,11 +516,14 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                 backfaceVisibility: 'hidden'
               }}
             >
-              <img
+              <Image
                 className="w-full absolute left-1/2 bottom-[-1px] will-change-transform transition-transform duration-[120ms] ease-out"
+                width={1324}
+                height={1726}
+                sizes="(max-width: 768px) 80vw, 360px"
+                loading="eager"
                 src={avatarUrl}
                 alt={`${name || 'User'} avatar`}
-                loading="lazy"
                 style={{
                   transformOrigin: '50% 100%',
                   transform:
@@ -553,8 +557,11 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
                       className="rounded-full overflow-hidden border border-white/10 flex-shrink-0"
                       style={{ width: '48px', height: '48px' }}
                     >
-                      <img
+                      <Image
                         className="w-full h-full object-cover rounded-full"
+                        width={48}
+                        height={48}
+                        sizes="48px"
                         src={miniAvatarUrl || avatarUrl}
                         alt={`${name || 'User'} mini avatar`}
                         loading="lazy"

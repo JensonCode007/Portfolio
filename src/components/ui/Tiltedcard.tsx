@@ -79,6 +79,8 @@ export default function TiltedCard({
       <div style={{ position: 'relative', transformStyle: 'preserve-3d', width: imageWidth, height: imageHeight,
           transform: `rotateX(${spring.rotateX}deg) rotateY(${spring.rotateY}deg) scale(${spring.scale})`,
           transition: 'transform 0.05s linear' }}>
+        {/* This legacy component accepts arbitrary image URLs, so keep the native image behavior. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={imageSrc} alt={altText}
           style={{ position: 'absolute', top: 0, left: 0, width: imageWidth, height: imageHeight,
             objectFit: 'cover', borderRadius: 15, transform: 'translateZ(0)', willChange: 'transform' }} />

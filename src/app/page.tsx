@@ -1,44 +1,36 @@
 "use client"
-import { useEffect, useRef, useState, useCallback } from 'react';
 import ProjectCard from "@/components/ui/ProjectCard"
 import {Particles} from "@/components/ui/particles"
 import Text3DFlip from "@/components/ui/text-3d-flip";
-import { TextAnimate } from "@/components/ui/text-animate"
 import Navbar from "@/components/ui/Navbar";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-import { motion } from "framer-motion"
 import projectData from "@/data/projects.json"
 import ProfileCard from "@/components/ui/ProfileCard";
-import BorderGlow from '@/components/BorderGlow';
+import AnimatedContent from "@/components/ui/AnimatedContent";
+import RippleDistortion from "@/components/ui/RippleDistortion";
+import Beams from "@/components/ui/Beams";
+import ExperienceTimeline from "@/components/ui/ExperienceTimeline";
 
 
 export default function Home() {
-  function Reveal({children,delay=0,style={}}:{children:React.ReactNode;delay?:number;style?:React.CSSProperties}){
-  const ref=useRef<HTMLDivElement>(null);
-  useEffect(()=>{
-    const el=ref.current!;
-    const ob=new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('visible');ob.disconnect();}},{threshold:0.1});
-    ob.observe(el);return()=>ob.disconnect();
-  },[]);
-  return <div ref={ref} className="reveal" style={{transitionDelay:`${delay}ms`,...style}}>{children}</div>;
-}
   return (
-    <main className="min-h-screen bg-black text-white relative overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden bg-[#07070a] text-white selection:bg-white/20">
       <Navbar/>
       
       <Particles
         className="absolute inset-0"
-        quantity={50} 
-        ease={80} 
-        color="#bfa5a5" 
-        refresh 
-
+        quantity={110}
+        ease={80}
+        color="#d4d4d8"
+        vy={0.1}
+        size={0.55}
       />
-      <section id="home" className="relative z-10 pt-40 pb-24 min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto px-8 w-full">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[34rem] bg-[radial-gradient(circle_at_70%_10%,rgba(255,255,255,0.06),transparent_32%),radial-gradient(circle_at_15%_8%,rgba(255,255,255,0.035),transparent_25%)]" />
+      <section id="home" className="relative z-10 flex min-h-screen items-center pb-24 pt-32 sm:pt-40">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col items-start justify-center">
+          <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+            <AnimatedContent className="flex flex-col items-start justify-center" trigger="mount" distance={28} duration={0.7}>
               <h2 className="text-2xl text-zinc-400 mb-2 font-medium tracking-wide">
                 Hey there, I am
               </h2>
@@ -61,12 +53,29 @@ export default function Home() {
               >
                 A Software Engineer building high-performance backends, AI architectures, and interactive web experiences.
               </TypingAnimation>
-            </div>
+            </AnimatedContent>
 
             
-            <Reveal delay={60}>
-                {/* ProfileCard — replaces TiltedCard, uses ASCII photo */}
-                <div style={{display:'flex',justifyContent:'center',marginBottom:32}}>
+            <AnimatedContent className="relative mx-auto w-full max-w-[19rem] sm:max-w-[22rem]" trigger="mount" distance={28} delay={0.08} duration={0.8}>
+                <div className="relative flex justify-center pb-2">
+                  <div className="absolute inset-4 top-8 overflow-hidden rounded-[2rem] border border-white/10 opacity-60 shadow-2xl shadow-black/60">
+                    <RippleDistortion
+                      src="/ascii_output_my_image.png"
+                      brushSize={130}
+                      strength={0.16}
+                      swirl={0.75}
+                      rings={3}
+                      spread={4}
+                      fade={2.5}
+                      spacing={24}
+                    tint="#ffffff"
+                      tintAmount={0.12}
+                      grayscale
+                      quality="low"
+                      trigger="both"
+                      className="opacity-70"
+                    />
+                  </div>
                   <ProfileCard
                     name="Jenson T Rajan"
                     title="Software Engineer"
@@ -79,13 +88,13 @@ export default function Home() {
                     enableTilt
                     enableMobileTilt={false}
                     behindGlowEnabled
-                    behindGlowColor="rgba(124,58,237,0.55)"
-                    innerGradient="linear-gradient(145deg,rgba(30, 26, 37, 0.18) 0%,rgba(99, 131, 129, 0.12) 100%)"
+                    behindGlowColor="rgba(255,255,255,0.22)"
+                    innerGradient="linear-gradient(145deg,rgba(30, 30, 34, 0.28) 0%,rgba(72, 72, 78, 0.14) 100%)"
                     onContactClick={()=>window.location.href='mailto:jensonrajan321@gmail.com'}
                     className=""
                   />
                 </div>
-              </Reveal>
+              </AnimatedContent>
 
           </div>
 
@@ -93,19 +102,41 @@ export default function Home() {
       </section>
 
 
-      <section id="about" className="relative z-10 py-1 bg-zinc-950/50">
-        <div className="max-w-6xl mx-auto px-8 w-full">
-          <TypingAnimation
-                blinkCursor={true}
-                pauseDelay={2000}
-                loop
-                startOnView
-                className="text-4xl font-bold mb-12 text-white border-b border-zinc-800 pb-4 inline-block "
-          >
-            /about
-          </TypingAnimation>
-          <div className="min-h-[150px]">
+      <section id="about" className="relative z-10 overflow-hidden border-y border-white/[0.06] bg-white/[0.02] py-16 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-60">
+          <Beams
+            color="#ffffff"
+            beamWidth={140}
+            rotation={30}
+            speed={0.65}
+            waveLength={233}
+            depth={1}
+            sharpness={0.6}
+            glow={0.85}
+            brightness={1.6}
+            grain={0.16}
+            quality={0.6}
+            dpr={1}
+            mouseInteraction={false}
+            intro
+            opacity={0.9}
+            className="h-full w-full"
+          />
+        </div>
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+          <AnimatedContent className="relative flex flex-col gap-6" stagger={0.06} distance={22} duration={0.65}>
             <TypingAnimation
+                  as="h2"
+                  blinkCursor={true}
+                  pauseDelay={2000}
+                  loop
+                  startOnView
+                  className="mb-8 inline-block border-b border-zinc-800 pb-4 text-4xl font-bold text-white"
+            >
+              /about
+            </TypingAnimation>
+            <TypingAnimation
+              as="p"
               blinkCursor={true}
               pauseDelay={2000}
               typeSpeed={50}
@@ -113,36 +144,56 @@ export default function Home() {
               loop
               className="text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed"
           >
-            Hey there, my name's Jenson. I'm a final year student pursuing a computer science degree. I love programmnig and build cool projects. I also love reasearch and reading.
+            Hey there, my name&apos;s Jenson. I&apos;m a final year student pursuing a computer science degree. I love programmnig and build cool projects. I also love reasearch and reading.
           </TypingAnimation>
-
-          </div>
-          
-        </div>  
+            </AnimatedContent>
+        </div>
       </section>
 
-      <section id="projects" className="relative z-10 py-1 mx-10">
-        <div className="max-w-6xl mx-auto px-8 w-full">
-          <TypingAnimation
-                blinkCursor={true}
-                pauseDelay={2000}
-                loop
-                startOnView
-                className="text-4xl font-bold mb-12 text-white border-b border-zinc-800 pb-4 inline-block "
-        >
-          /projects
-        </TypingAnimation>
+      <section id="experience" className="relative z-10 border-y border-white/[0.06] py-20 sm:py-24">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+          <AnimatedContent trigger="scroll" distance={22} duration={0.65}>
+            <TypingAnimation
+              as="h2"
+              blinkCursor={true}
+              pauseDelay={2000}
+              loop
+              startOnView
+              className="mb-12 inline-block border-b border-zinc-800 pb-4 text-4xl font-bold text-white"
+            >
+              /experience
+            </TypingAnimation>
+          </AnimatedContent>
+          <ExperienceTimeline />
+        </div>
+      </section>
+
+      <section id="projects" className="relative z-10 mx-0 py-20 sm:mx-10 sm:py-24">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
+          <AnimatedContent trigger="scroll" distance={22} duration={0.65}>
+            <TypingAnimation
+                  as="h2"
+                  blinkCursor={true}
+                  pauseDelay={2000}
+                  loop
+                  startOnView
+                  className="mb-12 inline-block border-b border-zinc-800 pb-4 text-4xl font-bold text-white"
+            >
+              /projects
+            </TypingAnimation>
+          </AnimatedContent>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projectData.map((project, index)=>(
             
               <ProjectCard
                 key={index}
                 title={project.title}
+                sub={project.sub}
                 description={project.description}
                 tags={project.tags}
                 githubUrl={project.githubUrl}
-                index={index}
+                showFlux={['sentinel', 'eye-guardian', 'docuvault', 'trocr'].includes(project.id)}
               />
             
             
@@ -155,7 +206,7 @@ export default function Home() {
         
         
       </section> 
-      <footer className="relative z-10 py-8 border-t border-zinc-900 text-center text-zinc-500 text-sm">
+      <footer className="relative z-10 border-t border-zinc-900 py-8 text-center text-sm text-zinc-500">
         <p>© 2026 Jenson T Rajan. All rights reserved.</p>
       </footer>
       

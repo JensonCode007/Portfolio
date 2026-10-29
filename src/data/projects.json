@@ -1,120 +1,63 @@
 [
   {
     "id": "sentinel",
-    "icon": "⚡",
-    "size": "feat",
-    "electric": true,
     "title": "Sentinel",
     "sub": "Real-Time Fraud Detection Engine",
-    "description": "An event-driven, high-throughput stream processing architecture for live financial fraud detection, combining a deterministic rule engine with a supervised XGBoost classifier that catches 98% of fraud at 82% precision (up from 28%/24% on an earlier unsupervised baseline). Kafka is partitioned by account ID for per-transaction ordering, paired with Redis-backed idempotency and per-message dead-letter-queue routing so a single malformed message can't take the system down. Dual Grafana dashboards — JVM health and custom AI-worker business metrics — sit on top of a Spring Boot + FastAPI pipeline with automated GitHub Actions CI/CD.",
-    "tags": [
-      "Event-Driven Architecture",
-      "Machine Learning",
-      "Apache Kafka",
-      "Spring Boot",
-      "FastAPI",
-      "XGBoost",
-      "Redis",
-      "Prometheus",
-      "Grafana",
-      "CI/CD"
-    ],
+    "description": "Event-driven fraud detection combining Kafka, Redis, XGBoost, Spring Boot, FastAPI, and Grafana.",
+    "tags": ["Event-Driven Architecture", "Machine Learning", "Apache Kafka", "Spring Boot", "FastAPI", "XGBoost", "Redis", "Grafana"],
     "githubUrl": "https://github.com/JensonCode007/Sentinel"
   },
   {
+    "id": "eye-guardian",
+    "title": "Eye Guardian",
+    "sub": "Healthy Screen Habits",
+    "description": "An Android app that uses camera-based distance checks, break reminders, and habit insights to encourage healthier screen time.",
+    "tags": ["Android", "Kotlin", "CameraX", "ML Kit", "Health Tech"]
+  },
+  {
     "id": "legacy-orchestrator",
-    "icon": "🧠",
-    "size": "normal",
-    "electric": false,
     "title": "Legacy Multi-Agent Orchestrator",
     "sub": "Ongoing Work",
-    "description": "An ongoing multi-agent orchestrator designed to integrate modern AI with legacy enterprise systems, like COBOL mainframes, to solve process debt. Currently in early development, the architecture is kept lightweight by relying solely on Gemini API calls to coordinate specialized agents (Scout, Knowledge Bridge, Compliance).",
-    "tags": [
-      "Gemini API", 
-      "LLMs", 
-      "Work in Progress"
-    ],
+    "description": "A lightweight Gemini-powered agent system for connecting modern AI workflows with legacy enterprise systems.",
+    "tags": ["Gemini API", "LLMs", "Work in Progress"],
     "githubUrl": "https://github.com/JensonCode007/Multi-Agent-Orchestrator"
-
   },
   {
     "id": "docuvault",
-    "icon": "🗄️",
-    "size": "half",
-    "electric": false,
     "title": "DocuVault Engine",
     "sub": "Secure Local-First RAG",
-    "description": "A secure, local-first Retrieval-Augmented Generation (RAG) engine. Built with a dual-stack architecture to ingest enterprise documents, ensure multi-tenant data isolation, and stream context-aware AI responses in real-time.",
-    "tags": [
-      "Event-Driven Streaming", 
-      "Multi-Tenancy", 
-      "RAG",
-      "JWT", 
-      "SpringBoot", 
-      "FastAPI"
-    ],
+    "description": "A secure local-first RAG engine for multi-tenant document ingestion and real-time context-aware responses.",
+    "tags": ["Event-Driven Streaming", "Multi-Tenancy", "RAG", "JWT", "Spring Boot", "FastAPI"],
     "githubUrl": "https://github.com/JensonCode007/TheDocumentVault"
   },
   {
     "id": "neo",
-    "icon": "🤖",
-    "size": "half",
-    "electric": false,
     "title": "Neo",
     "sub": "Local RAG Platform",
-    "description": "A self-hostable RAG platform built from scratch to chat with local files privately without uploading to the cloud.",
-    "tags": [
-      "Python", 
-      "FastAPI", 
-      "React", 
-      "Vector DB"
-    ],
+    "description": "A self-hostable platform for chatting with local files privately without uploading them to the cloud.",
+    "tags": ["Python", "FastAPI", "React", "Vector DB"],
     "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
   },
   {
     "id": "bitwise",
-    "icon": "💻",
-    "size": "normal",
-    "electric": false,
     "title": "Bitwise",
     "sub": "Collaborative Desktop IDE",
-    "description": "Bitwise is a desktop collaborative codespace built with Electron, React, and TypeScript. It provides a modern editor experience powered by Monaco, real-time collaboration via Yjs, and a connected backend for session management and persistence.",
-    "tags": [
-      "Web Sockets", 
-      "Electron", 
-      "TypeScript"
-    ],
+    "description": "A collaborative Electron codespace with Monaco, Yjs real-time collaboration, and TypeScript services.",
+    "tags": ["WebSockets", "Electron", "TypeScript"],
     "githubUrl": "https://github.com/JensonCode007/neo/tree/main"
   },
   {
     "id": "auv",
-    "icon": "🌊",
-    "size": "normal",
-    "electric": false,
     "title": "Autonomous Underwater Vehicle",
     "sub": "Competition Finalist",
-    "description": "Finalist at the IIT Madras AUV Competition. Developed the core logic and navigation systems.",
-    "tags": [
-      "C++", 
-      "ROS", 
-      "Hardware integration"
-    ]
+    "description": "Core navigation and control logic developed for an IIT Madras AUV Competition finalist.",
+    "tags": ["C++", "ROS", "Hardware Integration"]
   },
   {
     "id": "trocr",
-    "icon": "📜",
-    "size": "normal",
-    "electric": false,
     "title": "Custom TrOCR Pipeline",
     "sub": "Historical Malayalam Manuscripts",
-    "description": "An end-to-end Machine Learning OCR pipeline utilizing CRAFT localization, custom Vertical Projection Profiling, and a fine-tuned Vision-Encoder-Decoder Transformer to digitize highly degraded 19th-century texts.",
-    "tags": [
-      "PyTorch", 
-      "Hugging Face", 
-      "Transformers", 
-      "OpenCV", 
-      "Computer Vision", 
-      "Python"
-    ]
+    "description": "A computer-vision and transformer pipeline for digitizing degraded 19th-century Malayalam manuscripts.",
+    "tags": ["PyTorch", "Hugging Face", "Transformers", "OpenCV", "Computer Vision", "Python"]
   }
 ]
